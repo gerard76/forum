@@ -5,5 +5,5 @@ Forum::Application.routes.draw do
   
   mount Forem::Engine, :at => "/"
   
-  # root :to => "forem/forums#index"
+  root :to => "forums#index"
 end
