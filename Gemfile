@@ -2,12 +2,9 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.1'
 
-# Bundle edge Rails instead:
-# gem 'rails',     :git => 'git://github.com/rails/rails.git'
-
 gem 'mysql2'
-gem 'forem', :git => "git://github.com/radar/forem.git"
-gem 'forem-theme-base', :git => "git://github.com/radar/forem-theme-base.git"
+gem 'forem',            :git => "git://github.com/radar/forem.git"
+gem 'forem-theme-twist', :git => "git://github.com/radar/forem-theme-twist.git"
 
 # Gems used only for assets and not required
 # in production environments by default.
