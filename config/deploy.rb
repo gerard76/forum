@@ -1,5 +1,6 @@
 require 'bundler/capistrano'
 load 'config/deploy/symlinks'
+load 'config/deploy/assets'
 load 'config/deploy/rvm'
 load 'config/deploy/unicorn'
 
