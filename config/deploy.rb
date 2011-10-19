@@ -1,5 +1,5 @@
+require 'bundler/capistrano'
 load 'config/deploy/rvm'
-load 'config/deploy/bundler'
 
 set :application, "Forum"
 set :repository,  "git@github.com:gerard-leijdekkers/forum.git"
