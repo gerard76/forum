@@ -1,10 +1,12 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.1'
+gem "rake", '0.8.7'
 
 gem 'mysql2'
 gem 'forem',            :git => "git://github.com/radar/forem.git"
 gem 'forem-theme-twist', :git => "git://github.com/radar/forem-theme-twist.git"
+gem "devise"
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -15,22 +17,15 @@ group :assets do
 end
 
 gem 'jquery-rails'
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# Use unicorn as the web server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-gem 'capistrano'
-
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
-
-gem "cucumber-rails", :group => [:development, :test]
-gem "capybara", :group => [:development, :test]
-gem "devise"
 gem "haml", ">= 3.0.0"
 gem "haml-rails"
-gem "rspec-rails", ">= 2.0.1", :group => [:development, :test]
+
+# Use unicorn as the web server
+gem 'unicorn'
+
+group :development, :test do
+  gem "cucumber-rails", :group => [:development, :test]
+  gem "capybara", :group => [:development, :test]
+  gem 'capistrano'
+  gem "rspec-rails", ">= 2.0.1", :group => [:development, :test]
+end
