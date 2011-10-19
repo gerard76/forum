@@ -4,7 +4,7 @@ rails_env = ENV['RAILS_ENV'] || 'production'
 APP_PATH  = File.expand_path(File.join(File.dirname(__FILE__), '..'))
  
 # 16 workers and 1 master
-worker_processes (rails_env == 'production' ? 12 : 4)
+worker_processes 4
  
 # Load rails+github.git into the master before forking workers
 # for super-fast worker spawn times
