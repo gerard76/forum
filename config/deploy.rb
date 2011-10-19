@@ -1,5 +1,6 @@
 require 'bundler/capistrano'
 load 'config/deploy/rvm'
+load 'config/deploy/unicorn'
 
 set :application, "Forum"
 set :repository,  "git@github.com:gerard-leijdekkers/forum.git"

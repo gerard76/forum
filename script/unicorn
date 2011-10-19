@@ -1,0 +1,52 @@
+#!/usr/bin/env ruby
+
+UNICORN_RAILS = 'unicorn_rails'
+APP_PATH      = File.expand_path(File.join(File.dirname(__FILE__), '..'))
+APP_ENV       = ENV['RAILS_ENV'] || 'production'
+
+class Runner
+  class << self
+    
+    def start
+      `bundle exec #{UNICORN_RAILS} -c #{APP_PATH}/config/unicorn.rb -E #{APP_ENV} -D`
+    end
+    
+    def reload
+      `kill -s USR2 #{pid}`
+    end
+    
+    def restart
+      stop
+      start
+    end
+    
+    def graceful
+      `kill -s QUIT #{pid}"`
+      start
+    end
+    
+    def stop
+      `kill #{pid}`
+    end
+    
+    def pid
+      File.read "#{APP_PATH}/tmp/pids/unicorn.pid"
+    end
+    
+  end
+end
+
+case ARGV[0]
+when "start"
+  Runner.start
+when "reload"
+  Runner.reload
+when "restart"
+  Runner.restart
+when "stop"
+  Runner.stop
+else
+  STDERR.puts "usage ./script/spin [start|stop|restart|reload]"
+  exit(1)
+end
+
