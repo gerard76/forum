@@ -65,11 +65,11 @@ after_fork do |server, worker|
  
   ##
   # Unicorn master is started as root, which is fine, but let's
-  # drop the workers to eetnu:eetnu
+  # drop the workers to forum:forum
  
   begin
     uid, gid = Process.euid, Process.egid
-    user, group = 'eetnu', 'eetnu'
+    user, group = 'forum', 'forum'
     target_uid = Etc.getpwnam(user).uid
     target_gid = Etc.getgrnam(group).gid
     worker.tmp.chown(target_uid, target_gid)
@@ -79,7 +79,7 @@ after_fork do |server, worker|
       Process::UID.change_privilege(target_uid)
     end
   rescue => e
-    if RAILS_ENV == 'development'
+    if rails_env == 'development'
       STDERR.puts "couldn't change user, oh well"
     else
       raise e
