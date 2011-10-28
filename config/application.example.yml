@@ -1,0 +1,19 @@
+development: &defaults
+  sync:
+    ssh:
+      user_name: forum
+      host: forum.leydekkers.com
+      home: "/home/forum"
+    database:
+      database: forum_production
+      username: root
+      password: 
+      
+production:
+  <<: *defaults
+  
+test: &test
+  <<: *defaults
+  
+cucumber:
+  <<: *test

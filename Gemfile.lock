@@ -181,6 +181,7 @@ GEM
       ffi (>= 1.0.7)
       json_pure
       rubyzip
+    settingslogic (2.0.6)
     simple_form (1.5.2)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
@@ -224,10 +225,13 @@ DEPENDENCIES
   haml-rails
   jquery-rails
   mysql2
+  net-sftp
+  net-ssh
   rails (= 3.1.1)
   rake (= 0.8.7)
   rspec-rails (>= 2.0.1)
   sass-rails (~> 3.1.4)
+  settingslogic
   therubyracer
   uglifier (>= 1.0.3)
   unicorn

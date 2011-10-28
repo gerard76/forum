@@ -14,15 +14,20 @@ gem 'uglifier', '>= 1.0.3'
 gem 'jquery-rails'
 gem "haml", ">= 3.0.0"
 gem "haml-rails"
+gem 'settingslogic'
 
 group :production do
   gem 'therubyracer'
 end
 
-
-group :development, :test do
-  gem "cucumber-rails", :group => [:development, :test]
-  gem "capybara", :group => [:development, :test]
+group :development do
   gem 'capistrano'
-  gem "rspec-rails", ">= 2.0.1", :group => [:development, :test]
+  gem 'net-ssh'
+  gem 'net-sftp'
+end
+
+group :test do
+  gem "cucumber-rails"
+  gem "capybara"
+  gem "rspec-rails", ">= 2.0.1"
 end
