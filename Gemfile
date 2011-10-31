@@ -24,10 +24,18 @@ group :development do
   gem 'capistrano'
   gem 'net-ssh'
   gem 'net-sftp'
+  gem 'rb-fsevent',       require: false
+  gem 'guard-bundler'
+  gem 'guard-rspec'
+  gem 'guard-spork'
+  gem 'growl'
+  gem 'itslog'
 end
 
 group :test do
   gem "cucumber-rails"
   gem "capybara"
   gem "rspec-rails", ">= 2.0.1"
+  gem 'factory_girl_rails'
+  gem 'spork', '~> 0.9.0.rc'
 end
