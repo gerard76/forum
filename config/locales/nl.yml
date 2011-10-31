@@ -1,0 +1,4 @@
+nl:
+  mailer:
+    notification:
+      subject: Nieuw bericht
