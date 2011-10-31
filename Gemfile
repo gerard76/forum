@@ -15,6 +15,8 @@ gem 'jquery-rails'
 gem "haml", ">= 3.0.0"
 gem "haml-rails"
 gem 'settingslogic'
+gem 'net-ssh'
+gem 'net-sftp'
 
 group :production do
   gem 'therubyracer'
@@ -22,8 +24,6 @@ end
 
 group :development do
   gem 'capistrano'
-  gem 'net-ssh'
-  gem 'net-sftp'
   gem 'rb-fsevent',       require: false
   gem 'guard-bundler'
   gem 'guard-rspec'
