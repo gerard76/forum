@@ -28,6 +28,8 @@ Spork.prefork do
     # examples within a transaction, remove the following line or assign false
     # instead of true.
     config.use_transactional_fixtures = true
+    
+    config.include Factory::Syntax::Methods
   end
   
 end
