@@ -2,6 +2,7 @@ after "deploy:update", "symlinks:make"
 
 set :normal_symlinks, %w(
   config/database.yml
+  config/application.yml
   tmp
   log
 )
