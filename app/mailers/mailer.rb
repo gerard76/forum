@@ -1,5 +1,5 @@
 class Mailer < ActionMailer::Base
-  default from: "info@leydekkers.com"
+  default from: ::Configuration.email
   
   def notification(recipient, post)
     @post  = post
