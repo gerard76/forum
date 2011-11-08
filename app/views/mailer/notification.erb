@@ -1,1 +1,1 @@
-<%= @user %> heeft een nieuw bericht geplaatst in <%= link_to @topic.subject, forem.topic_url(@topic.id, host: Configuration.host) %>
+<%= @user %> heeft een nieuw bericht geplaatst in <%= link_to @topic.subject, forem.forum_topic_url(@topic.forum, @topic, host: Configuration.host) %>
