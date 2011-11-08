@@ -12,8 +12,8 @@ set :group_writable, false
 
 set :scm, :git
 
-role :web, "venus.i76.nl"                          # Your HTTP server, Apache/etc
-role :app, "venus.i76.nl"                          # This may be the same as your `Web` server
+role :web, "venus.i76.nl"                   # Your HTTP server, Apache/etc
+role :app, "venus.i76.nl"                   # This may be the same as your `Web` server
 role :db,  "venus.i76.nl", :primary => true # This is where Rails migrations will run
 
 set :deploy_to, "/home/forum"
