@@ -17,6 +17,7 @@ gem "haml-rails"
 gem 'settingslogic'
 gem 'net-ssh'
 gem 'net-sftp'
+gem 'mixable_engines'
 
 group :production do
   gem 'therubyracer'
