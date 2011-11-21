@@ -5,3 +5,8 @@ en:
   mailer:
     notification:
       subject: New post
+  forem:
+    post:
+      buttons:
+        update: Update
+      updated: Post updated
