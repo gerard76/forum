@@ -30,6 +30,7 @@ group :development do
   gem 'guard-spork'
   gem 'growl'
   gem 'itslog'
+  gem 'mailcatcher'
 end
 
 group :test do
