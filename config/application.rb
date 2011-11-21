@@ -17,6 +17,9 @@ end
 
 module Forum
   class Application < Rails::Application
+    # Require the configuration here so we can use it in the setup of the app
+    require "#{config.root}/app/models/configuration"
+    
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
