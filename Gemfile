@@ -1,15 +1,15 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.1'
+gem 'rails', '3.2.11'
 gem "rake",  '0.8.7'
 
 gem 'mysql2'
-gem 'forem',            :git => "git://github.com/radar/forem.git"
+gem 'forem',             :git => "git://github.com/radar/forem.git"
 gem 'forem-theme-twist', :git => "git://github.com/radar/forem-theme-twist.git"
 gem 'devise'
 gem 'unicorn'
-gem 'sass-rails',   '~> 3.1.4'
-gem 'coffee-rails', '~> 3.1.1'
+gem 'sass-rails'
+gem 'coffee-rails'
 gem 'uglifier',     '>= 1.0.3'
 gem 'jquery-rails'
 gem "haml", ">= 3.0.0"
@@ -18,6 +18,7 @@ gem 'settingslogic'
 gem 'net-ssh'
 gem 'net-sftp'
 gem 'mixable_engines'
+gem 'will_paginate'
 
 group :production do
   gem 'therubyracer'
@@ -28,7 +29,7 @@ group :development do
   gem 'rb-fsevent',       require: false
   gem 'guard-bundler'
   gem 'guard-rspec'
-  gem 'guard-spork'
+  # gem 'guard-spork'
   gem 'growl'
   gem 'mailcatcher'
 end
