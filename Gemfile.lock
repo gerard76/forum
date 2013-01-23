@@ -105,6 +105,8 @@ GEM
       factory_girl (~> 4.1.0)
       railties (>= 3.0.0)
     ffi (1.0.11)
+    forem-rdiscount (1.0.0)
+      rdiscount
     forem-redcarpet (1.0.0)
       pygments.rb (= 0.2.4)
       redcarpet (= 2.0.1)
@@ -208,6 +210,7 @@ GEM
     raindrops (0.10.0)
     rake (0.8.7)
     rb-fsevent (0.9.3)
+    rdiscount (1.6.8)
     rdoc (3.12)
       json (~> 1.4)
     redcarpet (2.0.1)
@@ -301,6 +304,7 @@ DEPENDENCIES
   devise
   factory_girl_rails
   forem!
+  forem-rdiscount
   forem-theme-twist!
   growl
   guard-bundler

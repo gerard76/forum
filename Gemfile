@@ -19,6 +19,7 @@ gem 'net-ssh'
 gem 'net-sftp'
 gem 'mixable_engines'
 gem 'will_paginate'
+gem 'forem-rdiscount'
 
 group :production do
   gem 'therubyracer'
