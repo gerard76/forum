@@ -32,6 +32,7 @@ group :development do
   # gem 'guard-spork'
   gem 'growl'
   gem 'mailcatcher'
+  gem 'rvm-capistrano'
 end
 
 group :test do
