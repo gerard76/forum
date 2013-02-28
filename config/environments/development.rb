@@ -28,7 +28,9 @@ Forum::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
   
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings   = Hash[Configuration.smtp.map { |k,v| [k.to_sym, v] }]
+  config.action_mailer.perform_deliveries = false
+  config.action_mailer.delivery_method = :test
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.smtp_settings   = Hash[Configuration.smtp.map { |k,v| [k.to_sym, v] }]
   
 end
