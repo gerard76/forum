@@ -1,0 +1,15 @@
+.forums_container
+  %h1 Zoekresultaat
+     
+  - if @topics.present?
+    %h2 Topics
+    %ul
+      - @topics.each do |topic|
+        %li= link_to topic.subject, forem.forum_topic_path(topic.forum, topic)
+  
+  - if @posts.present?
+    %h2 Posts
+    %ul
+      - @posts.each do |post|
+        %li= link_to post.topic.subject, forem.forum_topic_path(post.topic.forum, post.topic, anchor: "post-#{post.id}")
+        
