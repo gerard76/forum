@@ -1,0 +1,32 @@
+#forum
+  %h2
+    = link_to t('forem.forum.forums'), forem.root_path
+    &raquo;
+    Search results
+
+  = render 'search/form'
+  %table.topics.subdued{ cellspacing: 0 }
+    %thead
+      %tr
+        %th.icon
+        %th.byline= t('forem.topic.headings.topic')
+        %th.posts-count= t('forem.topic.headings.posts')
+        %th.views-count= t('forem.topic.headings.views')
+      
+    %tbody
+      - @topics.each do |topic|
+        %tr.topic{ class: "#{cycle('odd', 'even')}.#{topic.locked? ? 'locked' : 'unlocked'}"}
+          %td.icon
+            - if topic.locked?
+              %span.lock.icon
+            - if topic.pinned?
+              %span.pin.icon
+          %td.byline
+            = new_since_last_view_text(topic)
+            %div.subject
+              = link_to forem_emojify(topic.subject), forem.forum_topic_path(topic.forum, topic)
+            %div.started-by
+              = t "started_by"
+              = topic.posts.first.user
+          %td.posts-count= topic.posts.count
+          %td.views-count= topic.views_count
